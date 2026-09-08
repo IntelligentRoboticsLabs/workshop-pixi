@@ -15,16 +15,21 @@ git clone -b jazzy https://github.com/ros-navigation/navigation2.git src/navigat
 # 3. Rellenar dependencias automáticamente
 pixi-ros init --distro jazzy --platform linux-64
 
-# 4. Instalar y compilar
+# 4. Ajustar versiones de dependencias
+pixi add gcc_linux-64=13.3.0 gxx_linux-64=13.3.0
+pixi add libboost=1.88.0 libboost-devel=1.88.0
+pixi add ros-jazzy-rviz2
+
+# 5. Instalar y compilar
 pixi install
 pixi run build
 
-# 5. Verificar
+# 6. Verificar
 pixi shell
 ros2 pkg list | grep nav2
 ros2 pkg executables nav2_costmap_2d
 
-# 6. Simulación + RViz2
+# 7. Simulación + RViz2
 ros2 launch nav2_bringup tb3_simulation_launch.py
 ```
 

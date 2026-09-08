@@ -1,5 +1,0 @@
-pixi run vinca -d ./plansys2_subset --platform linux-64 -m
-pixi run rattler-build build --recipe-dir ./recipes \
-  -c https://prefix.dev/robostack-rolling --skip-existing
-pixi run rattler-index fs ./output --force
-pixi run rattler-build upload prefix --channel irl-rolling ...

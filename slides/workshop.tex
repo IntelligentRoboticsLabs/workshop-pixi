@@ -86,7 +86,7 @@ Juan Sebastián Cely & Francisco Miguel Moreno \\
     \titlepage
 \end{frame}
 
-\begin{frame}{Agenda}
+\begin{frame}[shrink=20]{Agenda}
     \tableofcontents[sectionstyle=show,subsectionstyle=show/shaded/hide,subsubsectionstyle=show/shaded/hide]
 \end{frame}
 
@@ -223,7 +223,7 @@ Multi-entorno en un proyecto & \checkmark & parcial & -- & parcial \\
 
 \PY{k}{[}\PY{k}{tasks}\PY{k}{]}
 \PY{n}{build}\PY{+w}{ }\PY{o}{=}\PY{+w}{ }\PY{p}{\PYZob{}}\PY{+w}{ }\PY{n}{cmd}\PY{+w}{ }\PY{p}{=}\PY{+w}{ }\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{colcon build \PYZhy{}\PYZhy{}symlink\PYZhy{}install}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{+w}{ }\PY{n}{inputs}\PY{+w}{ }\PY{p}{=}\PY{+w}{ }\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{src}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{+w}{ }\PY{p}{\PYZcb{}}
-\PY{n}{sim}\PY{+w}{   }\PY{o}{=}\PY{+w}{ }\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ros2 run turtlesim turtlesim\PYZus{}node}\PY{l+s+s2}{\PYZdq{}}
+\PY{n}{sim}\PY{+w}{ }\PY{o}{=}\PY{+w}{ }\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ros2 run turtlesim turtlesim\PYZus{}node}\PY{l+s+s2}{\PYZdq{}}
 
 \PY{k}{[}\PY{k}{activation}\PY{k}{]}
 \PY{n}{scripts}\PY{+w}{ }\PY{o}{=}\PY{+w}{ }\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{install/setup.sh}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}
@@ -369,7 +369,7 @@ pixi task list
 \begin{frame}[fragile]{Ejercicio 4 — Multi-entorno con features}
 \begin{filelisting}
 \begin{Verbatim}[commandchars=\\\{\}]
-\PY{k}{[}\PY{k}{dependencies}\PY{k}{]}\PY{+w}{        }\PY{c+c1}{\PYZsh{} feature \PYZdq{}default\PYZdq{}: ¡ya trae python 3.11!}
+\PY{k}{[}\PY{k}{dependencies}\PY{k}{]}\PY{+w}{  }\PY{c+c1}{\PYZsh{} feature \PYZdq{}default\PYZdq{}: ¡ya trae python 3.11!}
 \PY{n}{python}\PY{+w}{ }\PY{o}{=}\PY{+w}{ }\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{3.11.*}\PY{l+s+s2}{\PYZdq{}}
 
 \PY{k}{[}\PY{k}{feature}\PY{k}{.}\PY{k}{py310}\PY{k}{.}\PY{k}{dependencies}\PY{k}{]}
@@ -527,7 +527,7 @@ exit
 \begin{filelisting}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{k}{[}\PY{k}{tasks}\PY{k}{]}
-\PY{n}{build}\PY{+w}{      }\PY{o}{=}\PY{+w}{ }\PY{p}{\PYZob{}}\PY{+w}{ }\PY{n}{cmd}\PY{+w}{ }\PY{p}{=}\PY{+w}{ }\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{colcon build \PYZhy{}\PYZhy{}symlink\PYZhy{}install}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{+w}{ }\PY{n}{inputs}\PY{+w}{ }\PY{p}{=}\PY{+w}{ }\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{src}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{+w}{ }\PY{p}{\PYZcb{}}
+\PY{n}{build}\PY{+w}{  }\PY{o}{=}\PY{+w}{ }\PY{p}{\PYZob{}}\PY{+w}{ }\PY{n}{cmd}\PY{+w}{ }\PY{p}{=}\PY{+w}{ }\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{colcon build \PYZhy{}\PYZhy{}symlink\PYZhy{}install}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{+w}{ }\PY{n}{inputs}\PY{+w}{ }\PY{p}{=}\PY{+w}{ }\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{src}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{+w}{ }\PY{p}{\PYZcb{}}
 \PY{n}{run\PYZus{}talker}\PY{+w}{ }\PY{o}{=}\PY{+w}{ }\PY{p}{\PYZob{}}\PY{+w}{ }\PY{n}{cmd}\PY{+w}{ }\PY{p}{=}\PY{+w}{ }\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ros2 run mi\PYZus{}paquete talker\PYZus{}custom}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
 \PY{+w}{               }\PY{n}{depends\PYZhy{}on}\PY{+w}{ }\PY{o}{=}\PY{+w}{ }\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{build}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{+w}{ }\PY{err}{\PYZcb{}}
 \end{Verbatim}
@@ -577,6 +577,41 @@ pixi-ros init --distro jazzy --platform linux-64
 \end{itemize}
 \vfill
 \textbf{Checkpoint}: el \lstinline|pixi.toml| generado tiene decenas de \lstinline|ros-jazzy-*| + herramientas de build, y un bloque \lstinline|[tasks]| con \lstinline|build|/\lstinline|test| ya creados (\texttt{colcon} por debajo). Es idempotente.
+\end{frame}
+
+\begin{frame}[fragile]{Ajustar dependencias}
+\begin{terminal}
+pixi add gcc_linux-64=13.3.0 gxx_linux-64=13.3.0
+pixi add libboost=1.88.0 libboost-devel=1.88.0
+pixi add ros-jazzy-rviz2
+\end{terminal}
+\begin{itemize}
+    \item Por defecto, pixi-ros usa una versión de GCC y de Boost demasiado moderna para ROS 2 Jazzy. Para compilar nav2 necesitamos fijarlas a las versiones usadas en Ubuntu 24.04.
+    \item Rviz no se añade automáticamente por pixi-ros porque no es una dependencia de build, pero se usará en ejecución.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Ajustar dependencias}
+\begin{alertblock}{Error de sintaxis en TOML generado por \texttt{pixi-ros init}}
+En algunas versiones, la dependencia fijada de \texttt{xtensor} se escribe como una clave TOML inválida.
+\end{alertblock}
+\begin{filelisting}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k}{[}\PY{k}{dependencies}\PY{k}{]}
+\PY{+w}{...}
+\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{xtensor ==0.24.7}\PY{l+s+s2}{\PYZdq{}}\PY{+w}{ }\PY{o}{=}\PY{+w}{ }\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{*}\PY{l+s+s2}{\PYZdq{}}
+\end{Verbatim}
+\end{filelisting}
+\begin{center}
+\Large $\Downarrow$ corregir en \texttt{pixi.toml}
+\end{center}
+\begin{filelisting}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k}{[}\PY{k}{dependencies}\PY{k}{]}
+\PY{+w}{...}
+\PY{n}{xtensor}\PY{+w}{ }\PY{o}{=}\PY{+w}{ }\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{==0.24.7}\PY{l+s+s2}{\PYZdq{}}
+\end{Verbatim}
+\end{filelisting}
 \end{frame}
 
 \begin{frame}[fragile]{Compilar y verificar}

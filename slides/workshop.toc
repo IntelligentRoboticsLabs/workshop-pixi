@@ -1,9 +1,0 @@
-\babel@toc {spanish}{}\relax 
-\beamer@sectionintoc {1}{Introducción: ¿por qué ROS~2 necesita algo mejor?}{3}{0}{1}
-\beamer@sectionintoc {2}{¿Qué es Pixi?}{9}{0}{2}
-\beamer@sectionintoc {3}{Instalación y uso básico de Pixi}{21}{0}{3}
-\beamer@sectionintoc {4}{¿Qué es RoboStack?}{30}{0}{4}
-\beamer@sectionintoc {5}{Uso básico de RoboStack para compilar un workspace ROS~2}{38}{0}{5}
-\beamer@sectionintoc {6}{Infraestructura de RoboStack}{54}{0}{6}
-\beamer@sectionintoc {7}{Tu propia Buildfarm basada en RoboStack}{59}{0}{7}
-\beamer@sectionintoc {8}{Cierre}{76}{0}{8}
