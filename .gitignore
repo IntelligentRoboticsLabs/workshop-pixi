@@ -5,3 +5,17 @@ install/
 log/
 output/
 *.conda
+
+# Artefactos de compilación de LaTeX (slides/workshop.tex) — el PDF sí se versiona
+slides/*.aux
+slides/*.log
+slides/*.nav
+slides/*.out
+slides/*.snm
+slides/*.toc
+slides/*.vrb
+slides/*.listing
+slides/*.fls
+slides/*.fdb_latexmk
+slides/*.synctex.gz
+slides/_minted-*/
