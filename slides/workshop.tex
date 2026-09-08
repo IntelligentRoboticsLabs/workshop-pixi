@@ -732,7 +732,7 @@ En el bloque anterior usamos paquetes ya construidos. ¿Cómo se construyen?
 \node[draw, rounded corners, fill=green!25, minimum width=3.4cm, minimum height=0.9cm, right=1.4cm of rattler] (conda) {paquete \lstinline|.conda|};
 \draw[-Latex, thick] (pkgxml) -- (vinca);
 \draw[-Latex, thick] (vinca) -- (recipe);
-\draw[-Latex, thick] (recipe) |- (rattler);
+\draw[-Latex, thick] (recipe.south) -- ++(0,-0.4) -| (rattler.north);
 \draw[-Latex, thick] (rattler) -- (conda);
 \end{tikzpicture}%
 }
