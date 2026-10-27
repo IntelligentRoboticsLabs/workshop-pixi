@@ -15,6 +15,7 @@ platforms = ["linux-64"]
 ros-lyrical-turtle-dancer = "*"
 ros-lyrical-turtle-choreographer = "*"
 ros-lyrical-turtlesim = ">=1.10"
+ros-lyrical-ros2cli-common-extensions = "*"
 
 [tasks]
 sim = "ros2 run turtlesim turtlesim_node"
