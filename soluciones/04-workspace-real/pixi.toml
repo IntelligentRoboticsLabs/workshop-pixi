@@ -39,16 +39,18 @@ depends-on = ["importar"]
 description = "Compila el workspace con colcon"
 
 [tasks.sim]
-cmd = "ros2 launch easynav_playground_kobuki_worlds gazebo_sim.launch.yaml"
+cmd = "bash -c 'source install/setup.bash && ros2 launch easynav_playground_kobuki_worlds gazebo_sim.launch.yaml'"
 depends-on = ["build"]
 description = "Gazebo con el Kobuki en la casa"
 
 [tasks.teleop]
-cmd = "ros2 run teleop_twist_keyboard teleop_twist_keyboard"
+cmd = "bash -c 'source install/setup.bash && ros2 run teleop_twist_keyboard teleop_twist_keyboard'"
+depends-on = ["build"]
 description = "Mueve el Kobuki con el teclado (en otra terminal)"
 
 [tasks.test]
-cmd = "ros2 pkg executables teleop_twist_keyboard"
+cmd = "bash -c 'source install/setup.bash && ros2 pkg executables teleop_twist_keyboard'"
+depends-on = ["build"]
 description = "Comprueba que el overlay está cargado: lo que ejecuta la CI"
 
 [target.unix.activation]

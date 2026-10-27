@@ -61,12 +61,12 @@ cmd = "python check_overlay.py"
 description = "Comprueba que ROS y los paquetes locales pertenecen al entorno elegido"
 
 [tasks.dance]
-cmd = "ros2 run turtle_dancer dance"
+cmd = "bash -c 'source install/setup.bash && ros2 run turtle_dancer dance'"
 depends-on = ["build"]
 description = "Ejecuta nuestro nodo C++ (el overlay se activa al entrar en el entorno)"
 
 [tasks.brain]
-cmd = "ros2 run turtle_brain brain"
+cmd = "bash -c 'source install/setup.bash && ros2 run turtle_brain brain'"
 depends-on = ["build"]
 description = "Ejecuta el nodo con PyTorch (compila una vez antes del primer arranque)"
 
