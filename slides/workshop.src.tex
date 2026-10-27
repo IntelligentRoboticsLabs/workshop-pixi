@@ -115,6 +115,14 @@ Juan Sebastián Cely & Francisco Miguel Moreno \\
 %-------------------------------------------------
 \begin{frame}
     \titlepage
+    \begin{tikzpicture}[remember picture, overlay]
+      \node[anchor=south east, inner sep=0pt] at ([xshift=-0.4cm, yshift=1.0cm]current page.south east)
+        {\includegraphics[height=2.0cm]{figs/RosConES2026_small.png}};
+      \node[anchor=south west, inner sep=0pt] (urjc) at ([xshift=1.0cm, yshift=1.0cm]current page.south west)
+        {\includegraphics[width=2.1cm]{figs/logo_urjc.png}};
+      \node[anchor=south west, inner sep=0pt] at ([yshift=0.3cm]urjc.north west)
+        {\includegraphics[width=2.1cm]{figs/logo_irl.png}};
+    \end{tikzpicture}
 \end{frame}
 
 \begin{frame}{Hoy}
